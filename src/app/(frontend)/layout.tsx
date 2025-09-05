@@ -10,6 +10,9 @@ const Inter = inter({
 export default function Root({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja" className={Inter.className}>
+      <head>
+        <link rel="icon" type="image/png" href="/icon.png" />
+      </head>
       <body className="antialiased">{children}</body>
     </html>
   )
