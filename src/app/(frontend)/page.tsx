@@ -1,10 +1,3 @@
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'Payloadの環境',
-  description: '自分のやり方を取り入れながら'
-}
-
 export default function Home() {
   return (
     <div className="px-5 py-4">
