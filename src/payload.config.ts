@@ -6,20 +6,22 @@ import { en } from '@payloadcms/translations/languages/en'
 import { ja } from '@payloadcms/translations/languages/ja'
 import { buildConfig } from 'payload'
 import sharp from 'sharp'
-
+import { Kiroku } from './collections/Kiroku'
 import { Users } from './collections/Users'
+import { keishiki } from './katachi/keishiki'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 export default buildConfig({
   admin: {
+    dateFormat: keishiki.time,
     user: Users.slug,
     importMap: {
       baseDir: path.resolve(dirname)
     }
   },
-  collections: [Users],
+  collections: [Users, Kiroku],
   editor: lexicalEditor(),
   db: postgresAdapter({
     pool: {
