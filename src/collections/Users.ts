@@ -3,15 +3,11 @@ import type { CollectionConfig } from 'payload'
 export const Users: CollectionConfig = {
   slug: 'users',
   admin: {
-    defaultColumns: ['name', 'email'],
-    useAsTitle: 'name'
+    useAsTitle: 'email'
   },
   auth: true,
   fields: [
-    {
-      name: 'name',
-      type: 'text'
-    }
-  ],
-  timestamps: true
+    // Email added by default
+    // Add more fields as needed
+  ]
 }

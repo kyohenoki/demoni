@@ -7,7 +7,8 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "check": "biome check --write"
+    "check": "biome check --write",
+    "types": "payload generate:types"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.7",
